@@ -1,0 +1,29 @@
+---
+title: "Max's awesome website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Jeff's awesome website
+
+![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+
+You can write content. this can be whatever you want to say to the whole world!!
+
+I learned all my data science from [P8015](https://p8105.com)!
+
+To learn about this page, go [here](about.html)
+
+# Some other stuff that's really cool 
+
+Here's a really cool picture that I took: 
+
+<img src="images/images.jpeg" style="width:75%">
+
+
+
+
+
+
