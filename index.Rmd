@@ -1,28 +1,11 @@
 ---
-title: "Max's awesome website"
-output: 
-  html_document:
-    toc: true
-    toc_float: true
+title: "Max J. Hyman"
+output: html_document
 ---
 
-# This is Jeff's awesome website
+<img src="images/headshot.jpeg" style="width:35%"> 
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
-
-You can write content. this can be whatever you want to say to the whole world!!
-
-I learned all my data science from [P8015](https://p8105.com)!
-
-To learn about this page, go [here](about.html)
-
-# Some other stuff that's really cool 
-
-Here's a really cool picture that I took: 
-
-<img src="images/images.jpeg" style="width:75%">
-
-
+Welcome! I am a PhD student in the Department of Biostatistics at Columbia University. My research interests include longitudinal data analysis, multilevel modeling, and health services research. I am interested in pursuing a career in academic biostatistics after graduating. 
 
 
 
