@@ -1,14 +1,93 @@
 ---
-output: html_document
+title: "NYC Department of Health and Mental Hygiene Restaurant Inspections in Council District 10 (Washington Heights, Inwood, Marble Hill)"
+output: 
+  flexdashboard::flex_dashboard:
+    navbar:
+      - { title: "Back to Website", href: "maxjhyman7.github.io", align: right}
+    orientation: columns
+    vertical_layout: fill
 ---
 
-# Data and libraries
-
-Loading libraries
-
-```{r}
+```{r, include = FALSE}
+library(flexdashboard)
+library(plotly)
 library(tidyverse)
 library(p8105.datasets)
+```
 
-library(plotly)
+```{r}
+data("rest_inspec")
+
+graded_restaurants_district_10 <- rest_inspec |> 
+  filter(council_district == "10",
+         grade %in% c("A", "B", "C")) |> 
+  select(dba, cuisine_description, score, grade, latitude, longitude)
+```
+
+Column {data-width = 500}
+-----------------------------------------------------------------------
+
+### Restaurant Inspection Grades
+
+```{r}
+graded_restaurants_district_10 |> 
+  mutate(text_label = str_c("Restaurant: ", dba, 
+                            "\nGrade: ", grade)
+         ) |> 
+  plot_ly(
+    x = ~latitude, 
+    y = ~longitude, 
+    type = "scatter", 
+    mode = "markers",
+    color = ~grade, 
+    text = ~text_label, 
+    alpha = 0.75) |> 
+  layout(
+    xaxis = list(title = "Latitude"),
+    yaxis = list(title = "Longitude"),
+    legend = list(
+      title = list(text = "Grade"), 
+      x = 0.85,                             
+      y = 0.5,                              
+      xanchor = "left",
+      yanchor = "middle"
+    )
+  )
+```
+
+Column {data-width = 500}
+-----------------------------------------------------------------------
+
+### Distribution of Restaurant Inspection Scores by Grade
+
+```{r}
+graded_restaurants_district_10 |> 
+  plot_ly(
+    x = ~score, 
+    y = ~fct_rev(grade), 
+    type = "box") |> 
+  layout(
+    xaxis = list(title = "Score"),
+    yaxis = list(title = "Grade")
+    )
+```
+
+### Number of Restaurants with A-Grade Inspections by Cuisine
+
+```{r}
+graded_restaurants_district_10 |> 
+  filter(grade == "A") |> 
+  mutate(cuisine_description_short = substr(cuisine_description, 1, 15)) |> 
+  count(cuisine_description, cuisine_description_short) |> 
+  mutate(cuisine_description_short = fct_reorder(cuisine_description_short, -n)) %>%
+  plot_ly(
+    x = ~cuisine_description_short, 
+    y = ~n, 
+    type = "bar", 
+    hovertext = ~cuisine_description, 
+    hoverinfo = "text+y") |> 
+  layout(
+      xaxis = list(title = "Cuisine"),
+      yaxis = list(title = "Number of Restaurants")
+    )
 ```

@@ -4,47 +4,47 @@ output: html_document
 
 <br>
 
-## Academic Experience
+# Academic Experience
 
-#### Columbia University (2026 - Present)
+### Columbia University (2026 - Present)
 Doctor of Philosophy in Biostatistics (Anticipated Graduation: May 2031)
 
-#### The University of Chicago (2022 - 2026)
+### The University of Chicago (2022 - 2026)
 Graduate Student-at-Large (Non-Degree Seeking)\
 Various Coursework in Mathematics and Statistics
 
-#### Northwestern University (2017 - 2021)
+### Northwestern University (2017 - 2021)
 Bachelor of Arts in Economics (Honors), Minor in Data Science\
 GPA: 3.92/4.00, Magna Cum Laude, Phi Beta Kappa\
 Senior Honors Thesis in Economics: “The Value of Space During a Pandemic” 
 
 <br>
 
-## Professional Experience
+# Professional Experience
 
-#### The University of Chicago (2021 – 2026)
+### The University of Chicago (2021 – 2026)
 Senior Research Analyst (2024 - 2026), Research Analyst (2021 - 2024) \
 Principal Investigators: David Meltzer, MD, PhD; Parth Modi, MD, MS; Dimitra Skondra, MD, PhD; Ted Skolarus, MD, MPH; Sarah Rodriguez MD, MPH; Christopher Roxbury, MD, MBA; Samuel Bunting, MD, MSHA; Omer Raheem, MD, MSc; Alexandra Tate, PhD; Christopher Low, MD
 
-#### Independent Research to Publish Senior Honors Thesis in Economics (2021 - 2022)
+### Independent Research to Publish Senior Honors Thesis in Economics (2021 - 2022)
 Thesis Advisor and Principal Investigator: Ian Savage, PhD		
 
-#### Ann & Robert H. Lurie Children’s Hospital of Chicago (Summer 2018, Summer 2019)
-Summer Research Assistant \
+### Ann & Robert H. Lurie Children’s Hospital of Chicago (2018 - 2019)
+Summer Research Assistant (Summer 2018, Summer 2019) \
 Principal Investigators: Joseph Janicki MD, MS; Neeraj Patel MD, MPH, MBS
 
 <br>
 
-## Teaching Experience
+# Teaching Experience
 
-#### STATA Tutorial Instructor, The University of Chicago (2024 - 2026)
+### STATA Tutorial Instructor, The University of Chicago (2024 - 2026)
 CCTS 45500: Health Services Research: Data, Quantitative Methods, and Applications; Summer 2024, Summer 2025, Summer 2026
 
-#### Teaching Assistant, The University of Chicago (2022 - 2026)
+### Teaching Assistant, The University of Chicago (2022 - 2026)
 CCTS 45200: Fundamentals of Health Services Research; Summer 2022\
 CCTS 45500: Health Services Research: Data, Quantitative Methods, and Applications; Summer 2024, Summer 2025, Summer 2026
 
-#### Undergraduate Teaching Assistant, Northwestern University (2019 - 2021)
+### Undergraduate Teaching Assistant, Northwestern University (2019 - 2021)
 BIOL_SCI 220: Genetic and Molecular Processes Laboratory; Fall 2019\
 BIOL_SCI 221: Cellular Biology Laboratory; Winter 2020\
 BIOL_SCI 222: Investigative Laboratory; Spring 2020, Spring 2021\

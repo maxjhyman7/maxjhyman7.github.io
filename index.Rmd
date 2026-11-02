@@ -5,7 +5,7 @@ output: html_document
 
 <img src="images/headshot.jpeg" style="width:35%"> 
 
-Welcome! I am a PhD student in the Department of Biostatistics at Columbia University. My research interests include longitudinal data analysis, multilevel modeling, and health services research. I am interested in pursuing a career in academic biostatistics after graduating. 
+Welcome! I am a PhD student in the Department of Biostatistics at Columbia University. My research interests include longitudinal data analysis, multilevel modeling, and health services research. I am interested in pursuing a career in academic biostatistics after graduation. 
 
 
 
