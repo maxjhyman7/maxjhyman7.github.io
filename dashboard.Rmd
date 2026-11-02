@@ -65,7 +65,8 @@ graded_restaurants_district_10 |>
   plot_ly(
     x = ~score, 
     y = ~fct_rev(grade), 
-    type = "box") |> 
+    type = "box",
+    hoverinfo = "x") |> 
   layout(
     xaxis = list(title = "Score"),
     yaxis = list(title = "Grade")
@@ -77,15 +78,19 @@ graded_restaurants_district_10 |>
 ```{r}
 graded_restaurants_district_10 |> 
   filter(grade == "A") |> 
-  mutate(cuisine_description_short = substr(cuisine_description, 1, 15)) |> 
+  mutate(cuisine_description_short = substr(cuisine_description, 1, 10)) |> 
   count(cuisine_description, cuisine_description_short) |> 
-  mutate(cuisine_description_short = fct_reorder(cuisine_description_short, -n)) %>%
+  mutate(cuisine_description_short = fct_reorder(cuisine_description_short, -n)) |> 
+  mutate(text_label = str_c("Cuisine: ", cuisine_description,
+                            "\nNumber of Restaurants: ", n)
+         ) |> 
   plot_ly(
     x = ~cuisine_description_short, 
     y = ~n, 
     type = "bar", 
-    hovertext = ~cuisine_description, 
-    hoverinfo = "text+y") |> 
+    text = ~text_label,
+    hoverinfo = "text",
+    textposition = "none") |> 
   layout(
       xaxis = list(title = "Cuisine"),
       yaxis = list(title = "Number of Restaurants")
