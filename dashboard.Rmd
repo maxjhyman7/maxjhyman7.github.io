@@ -1,9 +1,9 @@
 ---
-title: "NYC DOHMH Restaurant Inspections in Council District 10 (Washington Heights, Inwood, Marble Hill)"
+title: "NYC Department of Health and Mental Hygiene Restaurant Inspections in Council District 10 (Washington Heights, Inwood, Marble Hill)"
 output: 
   flexdashboard::flex_dashboard:
     navbar:
-      - { title: "Back to Website", href: "maxjhyman7.github.io", align: right}
+      - {title: "Back to Website", href: "maxjhyman7.github.io", align: right}
     orientation: columns
     vertical_layout: fill
 ---
