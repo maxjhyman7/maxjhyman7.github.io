@@ -20,7 +20,8 @@ data("rest_inspec")
 
 graded_restaurants_district_10 <- rest_inspec |> 
   filter(council_district == "10",
-         grade %in% c("A", "B", "C")) |> 
+         grade %in% c("A", "B", "C")
+         ) |> 
   select(dba, cuisine_description, score, grade, latitude, longitude)
 ```
 
@@ -31,9 +32,7 @@ Column {data-width = 500}
 
 ```{r}
 graded_restaurants_district_10 |> 
-  mutate(text_label = str_c("Restaurant: ", dba, 
-                            "\nGrade: ", grade)
-         ) |> 
+  mutate(text_label = str_c("Restaurant: ", dba, "\nGrade: ", grade)) |> 
   plot_ly(
     x = ~latitude, 
     y = ~longitude, 
@@ -41,7 +40,8 @@ graded_restaurants_district_10 |>
     mode = "markers",
     color = ~grade, 
     text = ~text_label, 
-    alpha = 0.75) |> 
+    alpha = 0.75
+    ) |> 
   layout(
     xaxis = list(title = "Latitude"),
     yaxis = list(title = "Longitude"),
@@ -51,8 +51,8 @@ graded_restaurants_district_10 |>
       y = 0.5,                              
       xanchor = "left",
       yanchor = "middle"
+      )
     )
-  )
 ```
 
 Column {data-width = 500}
@@ -66,7 +66,8 @@ graded_restaurants_district_10 |>
     x = ~score, 
     y = ~fct_rev(grade), 
     type = "box",
-    hoverinfo = "x") |> 
+    hoverinfo = "x"
+    ) |> 
   layout(
     xaxis = list(title = "Score"),
     yaxis = list(title = "Grade")
@@ -81,16 +82,15 @@ graded_restaurants_district_10 |>
   mutate(cuisine_description_short = substr(cuisine_description, 1, 10)) |> 
   count(cuisine_description, cuisine_description_short) |> 
   mutate(cuisine_description_short = fct_reorder(cuisine_description_short, -n)) |> 
-  mutate(text_label = str_c("Cuisine: ", cuisine_description,
-                            "\nNumber of Restaurants: ", n)
-         ) |> 
+  mutate(text_label = str_c("Cuisine: ", cuisine_description, "\nNumber of Restaurants: ", n)) |> 
   plot_ly(
     x = ~cuisine_description_short, 
     y = ~n, 
     type = "bar", 
     text = ~text_label,
     hoverinfo = "text",
-    textposition = "none") |> 
+    textposition = "none"
+    ) |> 
   layout(
       xaxis = list(title = "Cuisine"),
       yaxis = list(title = "Number of Restaurants")

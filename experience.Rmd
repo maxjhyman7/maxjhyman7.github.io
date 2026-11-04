@@ -37,7 +37,7 @@ Principal Investigators: Joseph Janicki MD, MS; Neeraj Patel MD, MPH, MBS
 
 # Teaching Experience
 
-### STATA Tutorial Instructor, The University of Chicago (2024 - 2026)
+### Stata Tutorial Instructor, The University of Chicago (2024 - 2026)
 CCTS 45500: Health Services Research: Data, Quantitative Methods, and Applications; Summer 2024, Summer 2025, Summer 2026
 
 ### Teaching Assistant, The University of Chicago (2022 - 2026)
