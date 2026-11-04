@@ -1,5 +1,5 @@
 ---
-title: "NYC Department of Health and Mental Hygiene Restaurant Inspections in Council District 10 (Washington Heights, Inwood, Marble Hill)"
+title: "Most Recent NYC Department of Health and Mental Hygiene Restaurant Inspections in Council District 10 (Washington Heights, Inwood, Marble Hill)"
 output: 
   flexdashboard::flex_dashboard:
     navbar:
@@ -22,7 +22,14 @@ graded_restaurants_district_10 <- rest_inspec |>
   filter(council_district == "10",
          grade %in% c("A", "B", "C")
          ) |> 
-  select(dba, cuisine_description, score, grade, latitude, longitude)
+  select(camis, inspection_date, dba, cuisine_description, score, grade, latitude, longitude) |> 
+  group_by(camis) |> 
+  slice_max(order_by = inspection_date, 
+            n = 1, 
+            with_ties = FALSE
+            ) |> 
+  ungroup() |>
+  select(-camis, -inspection_date)
 ```
 
 Column {data-width = 500}
@@ -47,8 +54,8 @@ graded_restaurants_district_10 |>
     yaxis = list(title = "Longitude"),
     legend = list(
       title = list(text = "Grade"), 
-      x = 0.85,                             
-      y = 0.5,                              
+      x = 0.90,                             
+      y = 0.45,                              
       xanchor = "left",
       yanchor = "middle"
       )
